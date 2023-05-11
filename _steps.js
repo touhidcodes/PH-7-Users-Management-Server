@@ -7,9 +7,7 @@
     headers: {
         'content-type': "application/json"
     },
-    body: {
-        JSON.stringify(data)
-    }
+    body: JSON.stringify(data)
 })
 5. Use express.json() middleware on the server side
     */
