@@ -21,6 +21,7 @@ app.post("/users/", (req, res) => {
 	newUser.id = users.length + 1;
 	console.log(req.body);
 	users.push(newUser);
+	res.send(newUser)
 });
 
 app.listen(port, () => {
