@@ -4,6 +4,7 @@ const cors = require("cors");
 const port = process.env.PORT || 5000;
 const users = require("./data/users.json");
 
+// Middleware
 app.use(cors());
 
 app.get("/", (req, res) => {
@@ -12,6 +13,12 @@ app.get("/", (req, res) => {
 
 app.get("/users", (req, res) => {
 	res.send(users);
+});
+
+app.post("/users", (req, res) => {
+	const newUsers = req.body;
+	console.log("hit user");
+	console.log(req.body);
 });
 
 app.listen(port, () => {
